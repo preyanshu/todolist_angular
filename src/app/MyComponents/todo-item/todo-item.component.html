@@ -1,0 +1,11 @@
+
+<div class="items ml-8">
+    <h3 [ngClass]="{'strike':!todo.active}">{{todo.title}}</h3>
+    <p [ngClass]="{'strike':!todo.active}">{{todo.desc}}</p>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="onCheckboxClick(todo)" [checked]="!todo.active">
+        <label class="form-check-label" for="exampleCheck{{i}}">Mark as done</label>
+      </div>
+    <!-- event handling and event emiiter concept -->
+    <button class="btn btn-danger btn-sm my-3" (click)="onClick(todo)">delete</button>
+</div>
